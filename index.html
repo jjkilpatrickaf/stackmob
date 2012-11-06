@@ -1,0 +1,123 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Spotted</title>
+		<link rel="stylesheet" href="library/css/main.css" type="text/css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" type="text/css" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	</head>
+	<body>
+		<div id="fb-root"></div>
+
+		<!-- Start Page -->
+		<div data-role="page" id="start" data-theme="b">
+			<!-- header -->
+			<div data-role="header" data-theme="b">
+				<h1>Welcome to spotted</h1>
+			</div>
+			<!-- content -->
+			<div data-role="content" class="main-content">
+				<!-- login button -->
+				<div data-role="controlgroup">
+					<ul data-role="listview" data-divider-theme="b" >
+						<li>
+							<a href="#login">Login</a>
+						</li>
+						<li>
+							<a href="#sign-up">Sign Up</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- HOME -->
+		<div data-role="page" id="home" data-theme="b" data-add-back-btn="false">
+			<div data-role="header" data-theme="b">
+				<h1>Grubhunter</h1>
+				<a href="#options" data-icon="gear" class="ui-btn-right">Options</a>
+				<a href="#" id="logout" data-icon="arrow-l" class="ui-btn-left">Logout</a>
+			</div>
+			<div data-role="content">
+				<h2>You have logged in successfully</h2>
+				<h3>Welcome to your spotted app</h3>
+			</div>
+		</div>
+
+		<!-- OPTIONS -->
+		<div data-role="page" id="options" data-theme="b" data-add-back-btn="true">
+			<div data-role="header" data-theme="b">
+				<h1>Grubhunter - Options</h1>
+			</div>
+			<div data-role="content">
+				<!-- <a href="#" data-role="button" id="facebook-link">Link User with Facebook</a> -->
+			</div>
+		</div>
+
+		<!-- LOGIN -->
+		<div data-role="page" id="login" data-theme="b" data-add-back-btn="true">
+			<div data-role="header" data-theme="b">
+				<h1>Login</h1>
+			</div>
+			<div data-role="content">
+				<form id="login-form" method="post">
+					<label for="username">Username</label>
+					<input type="text" name="username" id="username" />
+
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" />
+					
+					<input type="submit" value="Submit"></input>
+				</form>
+				<a href="#" data-role="button" id="facebook-login">Login with Facebook</a>
+			</div>
+		</div>
+
+		<!-- SIGN UP -->
+		<div data-role="page" id="sign-up" data-theme="b" data-add-back-btn="true">
+			<div data-role="header" data-theme="b">
+				<h1>Sign Up</h1>
+			</div>
+			<div data-role="content">	
+				<form id="sign-up-form" method="post">
+					<label for="username">Username</label>
+					<input type="text" name="username" id="username" />
+
+					<label for="password">Password</label>
+					<input type="password" name="password" id="password" />
+
+					<label for="firstname">First Name</label>
+					<input type="text" name="firstname" id="firstname" />
+
+					<label for="lastname">Last Name</label>
+					<input type="text" name="lastname" id="lastname" />
+					
+					<input type="submit" value="Submit"></input>
+				</form>
+			   	<a href="#" data-role="button" id="facebook-sign-up">Sign up with Facebook</a>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://static.stackmob.com/js/json2-min.js"></script>
+		<script type="text/javascript" src="http://static.stackmob.com/js/underscore-1.4.1-min.js"></script>
+		<script type="text/javascript" src="http://static.stackmob.com/js/backbone-0.9.2-min.js"></script>
+		<script type="text/javascript" src="http://static.stackmob.com/js/stackmob-js-0.6.0-min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+		<script type="text/javascript">
+		StackMob.init({
+			appName: "spotted",
+			clientSubdomain: "analogfolk",
+			publicKey: "ea26a03b-ee56-4ccd-973b-677452b37cdb",
+			apiVersion: 0
+		});
+		</script>
+
+		<script type="text/javascript" src="library/scripts/spotted.js"></script>
+		<script type="text/javascript" src="library/scripts/grubhunter.js"></script>
+		
+	</body>
+</html>

@@ -1,0 +1,7 @@
+sm_app_name: spotted
+sm_client_name: analogfolk
+html5: true
+ 
+development:
+  key: ea26a03b-ee56-4ccd-973b-677452b37cdb
+  secret: 9e070978-d04a-448e-b1cd-cd165aa00a89
